@@ -7,23 +7,21 @@
  */
 function createTweetForm(){
 
-    window.setTimeout("",100);
-
     $("#twitter4c").empty()
-                   .append("<p>contact information</p>")
-                   .append("<input type='text' id='tweetbox'></input>")
-                   .append("<input type='button' id='tweeting' onclick='tweeting();'>");
-
+                   .append("<p>contact us!</p>" +
+                            "<input type='text' id='tweetbox'></input>" +
+                            "<input type='button' value='tweet!' id='tweeting' onclick='tweeting();'>");
 }
 
 function tweeting(){
-    var sendtext = $("#tweetbox").val();
 
-    $.post("./twitter4c/twitter4c.php",{message:sendtext},function(data){
+    var sendText = $("#tweetbox").val();
+
+    $.post("./twitter4c/twitter4c.php",{message:sendText},function(data){
         if(data==1){
             alert("1");
         }else{
-            alert("2");
+            alert(data);
         }
     });
 }

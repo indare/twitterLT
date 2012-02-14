@@ -14,5 +14,10 @@
     define("account","");
     define("tmhOauth","./tmhOAuth.php");
     define("tmhUtil","./tmhUtilities.php");
+    define("csvPath","./data/longtweet.csv");
+    define("dbHost","localhost");
+    define("dbUser","twitter4c");
+    define("dbPass","twitter4c");
+    define("dbName","twitter4c");
 
 ?>

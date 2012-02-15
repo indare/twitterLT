@@ -8,7 +8,7 @@
  */
     //require_once(dirname(__FILE__)."/setting.php");
     require_once(dirname(__FILE__)."/local_setting.php");
-    require_once(dirname(__FILE__) . "/listUtil.php");
+    require_once(dirname(__FILE__) . "/dbUtil.php");
 
     $listUtil = new listUtil();
 
@@ -21,12 +21,21 @@
 <head>
     <title>twitter4c test</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="content-style-type" content="text/css">
+    <link rel="stylesheet" href="./twitter4c.css" type="text/css">
 </head>
 <body>
 <form method="post" action="admin.php">
     <input type="submit" value="表示"/><br />
-    <table border="1">
-        <?php echo $outputRow; ?>
+    <table width="100%" style="word-break:break-all;">
+        <thead>
+            <tr>
+                <th width="10%">No</th><th width="30%">日時</th><th width="60%">tweet</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php echo $outputRow; ?>
+        </tbody>
     </table>
 </form>
 </body>

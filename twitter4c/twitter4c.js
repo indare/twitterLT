@@ -1,10 +1,4 @@
-/**
- * Created by JetBrains PhpStorm.
- * User: m_arino
- * Date: 12/02/13
- * Time: 16:41
- * To change this template use File | Settings | File Templates.
- */
+
 function createTweetForm(){
 
     $("#twitter4c").empty()

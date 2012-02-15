@@ -1,11 +1,5 @@
 <?php
-/**
- * Created by JetBrains PhpStorm.
- * User: m_arino
- * Date: 12/02/14
- * Time: 19:37
- * To change this template use File | Settings | File Templates.
- */
+
     //require_once(dirname(__FILE__)."/setting.php");
     require_once(dirname(__FILE__)."/local_setting.php");
     require_once(dirname(__FILE__) . "/dbUtil.php");

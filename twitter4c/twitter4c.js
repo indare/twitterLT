@@ -9,7 +9,7 @@ function createTweetForm(){
 
     $("#twitter4c").empty()
                    .append("<p>contact us!</p>" +
-                            "<input type='text' id='tweetbox'></input>" +
+                            "<input type='text' id='tweetbox' />" +
                             "<input type='button' value='tweet!' id='tweeting' onclick='tweeting();'>");
 }
 
@@ -25,3 +25,7 @@ function tweeting(){
         }
     });
 }
+
+$(function(){
+    createTweetForm();
+})

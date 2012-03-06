@@ -15,14 +15,9 @@
             $dbUtil->saveTweet(date("Y/m/d H:i:s"),$message);
 
             //140文字制限
-            if ((strlen($message) + $this->account_length) >= 140) {
+            if ((strlen($message) + $this->account_length +1) >= 140) {
                 $message = "長すぎるので省略されました。";
             }
-            /*
-            * TwitterAPIポケットリファレンス(P.103)
-            * 一部、tmhOAuthに変更があります。
-            * tmhOAuthのコンストラクタで渡す際のArrayKey名変更
-            */
 
             //tmhOAuth初期化
             require_once(tmhOauth);

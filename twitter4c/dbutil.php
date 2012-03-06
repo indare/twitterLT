@@ -1,15 +1,8 @@
 <?php
-    /**
-     * Created by JetBrains PhpStorm.
-     * User: m_arino
-     * Date: 12/02/14
-     * Time: 19:09
-     * To change this template use File | Settings | File Templates.
-     */
+
     class listUtil {
             private $dbUtil;
             function __construct () {
-                require_once(dirname(__FILE__). "/dbUtil.php");
                 $this->dbUtil = new dbUtil();
             }
 

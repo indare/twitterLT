@@ -2,9 +2,9 @@
 function createTweetForm(){
 
     $("#twitter4c").empty()
-                   .append("<p>contact us!</p>" +
-                            "<input type='text' id='tweetbox' />" +
-                            "<input type='button' value='tweet!' id='tweeting' onclick='tweeting();'>");
+                   .append("<p>Contact us!</p>" +
+                            "<input type='text' class='input-xlarge' placeholder='ここに内容を書いてね。' id='tweetbox' style='margin: 5px;'/>" +
+                            "<button class='btn btn-info' style='margin: 5px;' onclick='tweeting();'>Tweet</button>");
 }
 
 function tweeting(){
@@ -12,12 +12,9 @@ function tweeting(){
     var sendText = $("#tweetbox").val();
 
     $.post("./twitter4c/twitter4c.php",{message:sendText},function(data){
-        if(data==1){
-            alert("1");
-        }else{
-            alert(data);
-        }
+        alert(data);
     });
+    $.post("./twitter4c/twitter4c")
 }
 
 $(function(){

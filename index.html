@@ -43,9 +43,23 @@
         &nbsp;
     </div>
     <div class="row">
-        <div class="span12">
+        <div class="span6">
             <div style="margin: 5px;" id="result4c">
             </div>
+        </div>
+        <div class="span6">
+            <pre>
+                CREATE DATABASE `twitter4c` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+                USE `twitter4c`;
+
+                CREATE TABLE IF NOT EXISTS `tweet_log` (
+                  `no` int(11) NOT NULL AUTO_INCREMENT,
+                  `trantime` datetime NOT NULL,
+                  `tweet` text NOT NULL,
+                  PRIMARY KEY (`no`)
+                ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
+
+            </pre>
         </div>
     </div>
 

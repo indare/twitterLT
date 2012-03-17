@@ -47,9 +47,9 @@
             セットアップ手順<br />
             １．適当なフォルダで git@github.com:indare/twitterLT.git <br />
             ２．/twitterLT/twitter4c/setting.phpを編集<br />
-            ２−１．具体的にはde.twitter.comで各種キーを取得
-            ２−２．consumer_key/consumer_secret/access_token/access_token_secret　を書き込む
-            ２−２（補足）．アクセスキーはread writeで取得
+            ２−１．具体的にはde.twitter.comで各種キーを取得<br />
+            ２−２．consumer_key/consumer_secret/access_token/access_token_secret　を書き込む<br />
+            ２−２（補足）．アクセスキーはread writeで取得<br />
             ２−３．MySqlにつないで下記のスクプトを流して、データベースとテーブル生成<br />
             <pre>
 CREATE DATABASE `twitter4c` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
@@ -63,14 +63,14 @@ CREATE TABLE IF NOT EXISTS `tweet_log` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
             </pre>
             ２−４．MySqlの設定情報（ID・PASS・サーバー名・テーブル名）をsetting.phpに書き込む<br />
-            ３．埋め込みたいディレクトリにbootstrapのセットをUpload
-            ４．埋め込みたいページに下記コードを追記
+            ３．埋め込みたいディレクトリにbootstrapのセットをUpload<br />
+            ４．埋め込みたいページに下記コードを追記<br />
             <pre>
 &lt;script type="text/javascript" charset="utf-8" src="twitter4c/jquery-1.7.1.js"&gt;&lt;/script&gt;
 &lt;script type="text/javascript" charset="utf-8" src="twitter4c/twitter4c.js"&gt;&lt;/script&gt;
 &lt;link rel="stylesheet" href="css/bootstrap.css" type="text/css"&gt;
             </pre>
-            ５．あとは表示したい場所に下記html書く。
+            ５．あとは表示したい場所に下記html書く。<br />
             <pre>
 &lt;div style="margin: 5px;" id="twitter4c"&gt;&lt;/div&gt;
             </pre>

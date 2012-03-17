@@ -4,6 +4,7 @@
         private $account_length;
 
         function __construct () {
+            require_once(dirname(__FILE__)."/setting.php");
             $this->account_length = strlen(account);
         }
 

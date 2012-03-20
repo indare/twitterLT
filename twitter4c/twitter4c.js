@@ -3,16 +3,15 @@ function createTweetForm(){
 
     $("#twitter4c").empty()
                    .append("<p>Contact us!</p>" +
-                            "<input type='text' class='input-xlarge' placeholder='ここに内容を書いてね。' id='tweetbox' style='margin: 5px;'/>" +
+
+                            "<label for='namebox'>名前：</label><input type='text' class='input-xlarge' placeholder='おなまえ。' id='namebox' style='margin: 5px;'/>" +
+                            "<label for='tweetbox'>内容：</label><input type='text' class='input-xlarge' placeholder='ここに内容を書いてね。' id='tweetbox' style='margin: 5px;'/>" +
                             "<button class='btn btn-primary' style='margin: 5px;' onclick='tweeting();'>Tweet</button>");
 }
 
 function tweeting(){
 
     var sendText = $("#tweetbox").val();
-
-    if (sendText
-        )
 
     $.post("./twitter4c/twitter4c.php",{message:sendText},function(data){
         alert(data);

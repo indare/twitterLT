@@ -27,12 +27,6 @@ function tweeting(){
     $.post("./twitter4c/twitter4c")
 }
 
-function showResult(){
-    $("#result4c").empty()
-                   .append("<p>まだ未実装</p>");
-        
-}
-
 $(function(){
     createTweetForm();
 })

@@ -7,13 +7,6 @@
     <script type="text/javascript" charset="utf-8" src="twitter4c/jquery-1.7.1.js"></script>
     <script type="text/javascript" charset="utf-8" src="twitter4c/twitter4c.js"></script>
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
-    <script type="text/javascript">
-
-        function visibleChange(){
-            $("twitter4c").css('display')=='none' ?  $("twitter4c").slideDown() : $("twitter4c").slideUp();
-        }
-
-    </script>
 </head>
 <body>
 <div class="container" style="margin-top: 20px;">
@@ -36,7 +29,7 @@
     </div>
     <div class="row">
         <div class="span12">
-            <button class="btn btn-danger" onclick="showResult();">問い合わせ履歴を表示してみる。</button><br />
+            <button class="btn btn-danger" onclick="getTweetList();">問い合わせ履歴を表示してみる。</button><br />
             <div style="margin: 5px;" id="result4c"></div>
         </div>
     </div>

@@ -97,13 +97,13 @@
 
     extract($_POST,EXTR_PREFIX_ALL,"post");
 
-    switch($post_type){
+    switch($_POST["type"]){
         case "put":
-            echo $twitter4c->tweet($post_name,$post_message);
+            echo $twitter4c->tweet($_POST["name"],$_POST["message"]);
             break;
         case "get":
             $listUtil = new listUtil();
-            return $listUtil->getTweetList();
+            echo $listUtil->getTweetList();
             break;
     }
 

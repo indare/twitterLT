@@ -2,7 +2,7 @@
 
     require_once(dirname(__FILE__)."/setting.php");
     //require_once(dirname(__FILE__)."/local_setting.php");
-    require_once(dirname(__FILE__) . "/dbUtil.php");
+    require_once(dirname(__FILE__) . "/twitter4c.php");
 
     $listUtil = new listUtil();
 

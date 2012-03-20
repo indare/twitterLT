@@ -12,8 +12,9 @@ function createTweetForm(){
 function tweeting(){
 
     var sendText = $("#tweetbox").val();
+    var sendName = $("#namebox").val();
 
-    $.post("./twitter4c/twitter4c.php",{message:sendText},function(data){
+    $.post("./twitter4c/twitter4c.php",{name:sendName,message:sendText},function(data){
         alert(data);
     });
     $.post("./twitter4c/twitter4c")

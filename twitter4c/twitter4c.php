@@ -14,7 +14,7 @@
             return $output;
         }
         private function makeRowHTML($no,$trantime,$name,$tweet){
-            return"<div class='row'><div class='span3'>$no</div><div class='span3'>$trantime</div><div class='span3'>$name</div><div class='span3'>$tweet</div></div>\n";
+            return"<div class='row'><div class='span2'>$no</div><div class='span2'>$trantime</div><div class='span2'>$name</div><div class='span2'>$tweet</div></div>\n";
         }
 
     }
@@ -36,7 +36,7 @@
             return $returnValue;
         }
 
-        function getTweetList () {
+        function getTweetList (){
             $this->openConnect();
             $stmt = $this->pdoCon->query("select no,trantime,name,tweet from tweet_log order by no");
             $returnArray = array();

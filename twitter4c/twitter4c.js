@@ -9,6 +9,13 @@ function createTweetForm(){
                             "<button class='btn btn-primary' style='margin: 5px;' onclick='tweeting();'>Tweet</button>");
 }
 
+function getTweetList(){
+    $.post("./twitter4c/admin.php",{},function(data){
+        $("#result4c").empty()
+                        .append(data);
+    });
+}
+
 function tweeting(){
 
     var sendText = $("#tweetbox").val();

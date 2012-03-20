@@ -5,7 +5,6 @@
         function __construct () {
             $this->dbUtil = new dbUtil();
         }
-
         function getTweetList(){
             $listArray = $this->dbUtil->getTweetList();
             $output="";
@@ -14,7 +13,6 @@
             }
             return $output;
         }
-
         private function makeRowHTML($no,$trantime,$name,$tweet){
             return"<tr><td>$no</td><td>$trantime</td><td>$name</td><td>$tweet</td></tr>\n";
         }
@@ -95,6 +93,17 @@
 
     ini_set("date.timezone", "Asia/Tokyo");
 
-    //post時動作
     $twitter4c = new twitter4c();
-    echo $twitter4c->tweet($_POST["name"],$_POST["message"]);
+
+    switch($_POST["type"]){
+        case "put":
+            echo $twitter4c->tweet($_POST["name"],$_POST["message"]);
+            break;
+        case "get":
+            $listUtil = new listUtil();
+            return $listUtil->getTweetList();
+            break;
+    }
+
+
+?>

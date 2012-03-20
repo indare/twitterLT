@@ -10,18 +10,18 @@ function createTweetForm(){
 }
 
 function getTweetList(){
-    $.post("./twitter4c/admin.php",{},function(data){
-        $("#result4c").empty()
-                        .append(data);
-    });
-}
+    $.post("./twitter4c/twitter4c.php",{type:"get"},function(data){
 
+$("#result4c").empty()
+                .append(data);
+});
+}
 function tweeting(){
 
     var sendText = $("#tweetbox").val();
     var sendName = $("#namebox").val();
 
-    $.post("./twitter4c/twitter4c.php",{name:sendName,message:sendText},function(data){
+    $.post("./twitter4c/twitter4c.php",{type:"set",name:sendName,message:sendText},function(data){
         alert(data);
     });
     $.post("./twitter4c/twitter4c")

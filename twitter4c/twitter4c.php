@@ -14,7 +14,7 @@
             return $output;
         }
         private function makeRowHTML($no,$trantime,$name,$tweet){
-            return"<tr><td>$no</td><td>$trantime</td><td>$name</td><td>$tweet</td></tr>\n";
+            return"<div class='row'><div class='span3'>$no</div><div class='span3'>$trantime</div><div class='span3'>$name</div><div class='span3'>$tweet</div></div>\n";
         }
 
     }
